@@ -1,0 +1,16 @@
+<section class="container">
+  <h1>Algolia search</h1>
+  <ais-instantsearch [config]="config">
+    <ais-search-box></ais-search-box>
+    <ais-refinement-list attribute="brand"></ais-refinement-list>
+    <ais-hits>
+      <ng-template let-hits="hits">
+        <ol class="ais-Hits-list">
+          <li *ngFor="let hit of hits" class="ais-Hits-item">
+            {{hit.name}}
+          </li>
+        </ol>
+      </ng-template>
+    </ais-hits>
+  </ais-instantsearch>
+</section>
